@@ -18,23 +18,29 @@ export class CheckSampleComponent implements OnInit, DoCheck, AfterContentChecke
     this.quantidade -= 1
   }
 
+  //Checked -> content -> view
+
   ngDoCheck(): void {
       console.log("ngDoCheck")
   }
   ngOnInit(): void {
     console.log("ngOnInit")
   }
-  ngAfterContentChecked(): void {
-    console.log("ngAfterContentChecked")
-  }
+  //Quando o primeiro conteúdo é iniciado
   ngAfterContentInit(): void {
     console.log("ngAfterContentInit")
   }
-  ngAfterViewChecked(): void {
-    console.log("ngAfterViewChecked")
-  }
+  //depois da inicialização da view
   ngAfterViewInit(): void {
     console.log("ngAfterViewInit")
+  }
+  //após alguma alteração, verifica o conteúdo
+  ngAfterContentChecked(): void {
+    console.log("ngAfterContentChecked")
+  }
+  //após alguma alteração, verifica a view
+  ngAfterViewChecked(): void {
+    console.log("ngAfterViewChecked")
   }
 
 }
